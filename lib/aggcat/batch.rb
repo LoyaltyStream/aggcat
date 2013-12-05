@@ -54,9 +54,12 @@ module Aggcat
         response = oauth_client.send(http_method, BASE_URL + path, *options)
         result = {:status_code => response.code}
         if response.content_type.include?('application/octet-stream')
-          sio = StringIO.new(response.body)
-          gz = Zlib::GzipReader.new(sio)
-          result[:result] = gz.read
+          #sio = StringIO.new(response.body)
+          #gz = Zlib::GzipReader.new(sio)
+          #result[:result] = gz.read
+
+          # leave in gzip format
+          result[:result] = response.body
         else
           result[:result] = parse_xml(response.body)
         end
