@@ -1,7 +1,9 @@
 module Aggcat
   class Batch < Aggcat::Base
 
-    BASE_URL = 'https://financialdatafeed.platform.intuit.com/v1'
+    #BASE_URL = 'https://financialdatafeed.platform.intuit.com/v1'
+    BASE_URL = 'https://api.finicity.com/financialdatafeed/v1'
+
 
     def initialize(options={})
       raise ArgumentError.new('batch_id is required for scoping batch requests') if options[:batch_id].nil? || options[:batch_id].to_s.empty?

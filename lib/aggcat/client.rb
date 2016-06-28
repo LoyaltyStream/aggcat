@@ -1,7 +1,9 @@
 module Aggcat
   class Client < Aggcat::Base
 
-    BASE_URL = 'https://financialdatafeed.platform.intuit.com/rest-war/v1'
+    #BASE_URL = 'https://financialdatafeed.platform.intuit.com/rest-war/v1'
+    # todo: is this right?
+    BASE_URL = 'https://api.finicity.com/financialdatafeed/v1'
 
     def initialize(options={})
       raise ArgumentError.new('customer_id is required for scoping all requests') if options[:customer_id].nil? || options[:customer_id].to_s.empty?

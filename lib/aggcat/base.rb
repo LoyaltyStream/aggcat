@@ -12,7 +12,8 @@ require 'uri'
 module Aggcat
   class Base
 
-    SAML_URL = 'https://oauth.intuit.com/oauth/v1/get_access_token_by_saml'
+    #SAML_URL = 'https://oauth.intuit.com/oauth/v1/get_access_token_by_saml'
+    SAML_URL = 'https://api.finicity.com/oauth/v1/get_access_token_by_saml'
 
     LOGIN_NAMESPACE = 'http://schema.intuit.com/platform/fdatafeed/institutionlogin/v1'
     CHALLENGE_NAMESPACE = 'http://schema.intuit.com/platform/fdatafeed/challenge/v1'
